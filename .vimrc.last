@@ -1,0 +1,25 @@
+let python_highlight_all = 1
+
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+
+" nmap <F8> :TagbarToggle<CR>
+autocmd vimenter * NERDTree
+
+let g:NERDTreeWinPos = "right"
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> tw :GhcModTypeClear<CR>
+
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+if has("gui_running")
+    imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+else
+    if has("unix")
+        inoremap <Nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
+    endif
+endif
+
+let g:haskellmode_completion_ghc = 1
+autocmd Filetype haskell setlocal omnifunc=necoghc#omnifunc

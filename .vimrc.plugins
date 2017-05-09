@@ -1,0 +1,8 @@
+Plugin 'davidhalter/jedi-vim'
+Plugin 'achimnol/python-syntax'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/vimproc.vim'
